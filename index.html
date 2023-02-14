@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1f100d425d.js" crossorigin="anonymous"></script>
+    <script src="../js/script.js" defer></script>
+    <title>ABC Optical</title>
+</head>
+<body>
+
+    <nav>
+        <div class="topbar">
+            <a href="index.html"><img src="images/logo.png" id="logo" alt="ABC Optical home page"></a>
+            <i id="burger" class="fa-solid fa-bars"></i>
+        </div>
+        <ul id="menu" class="hidden"> 
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <header class="photo-bg" id="header">
+        <h4>Shop 36, Lvl 1 Myer Centre<br>Queen Street Mall<br>Brisbane</h4>
+        <h4>07 3256 7101</h4>
+    </header>
+    
+
+
+     <section class="color-bg" id="about">
+        <div class="content">
+            <figure id="kid">
+            <img src="images/kid.png" alt="illustrated child with glasses">
+            <figcaption><a href="https://www.freepik.com/free-vector/hand-drawn-children-back-school_8925986.htm#query=children%20back%20to%20school&position=4&from_view=search&track=ais">Image by pikisuperstar</a> on Freepik</figcaption>
+            </figure>
+            <article>
+                <h2>We specialise in children's optometry.</h2>
+                <p>ABC Optical are a Brisbane based company which is well regarded locally. We are recognised as being able to manage children’s needs with a professional caring approach.</p>
+                <p>We employ two full-time, in-store qualified optometrists able to diagnose and treat a number of eye related problems. Our optometrists strive to make a positive difference to the health and well-being of our customers, endeavoring to obtain the best visual outcome so that customers realise their full potential in work, study, sport and leisure.</p>
+                <a href="#services" class="button">Explore our services</a>
+            </article>
+        </div>
+    </section>
+
+
+
+    <section class="photo-bg" id="services">
+            <h2>Our Services</h2>
+            <ul id="services-grid">
+                <li>
+                    <i class="fa-solid fa-eye"></i>
+                    <h3>Eye examinations</h3>
+                    <ul>
+                        <li>Diabetic eye examinations</li>
+                        <li>Colour vision assessments</li>
+                        <li>Macular degeneration tests</li>
+                        <li>Glaucoma & eye pressure testing</li>
+                        <li>Checks for cateracts</li>
+                        <li>Focusing ability (presbyopia)</li>
+                        <li>Eye muscle movement and control</li>
+                        <li>Amblyopia (lazy eye)</li>
+                        <li>Clearness of vision (myopia, hyperopia, astigmatism)</li>
+                        <li>Referrals for laser eye surgery</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <i class="fa-solid fa-ruler"></i>
+                    <h3>Eyewear fitting</h3>
+                    <ul>
+                        <li>Contact Lens fitting and management</li>
+                        <li>Advice on the correct fitting of good quality sunglasses (both prescription and non-prescription, in both adults and children, particularly in a sporting environment</li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="fa-solid fa-glasses"></i>
+                    <h3>Glasses</h3>
+                    <ul>
+                        <li>Spectacles</li>
+                        <li>Mining & industrial safety glasses</li>
+                    </ul>
+                </li>
+            </ul>        
+    </section>
+
+
+
+    <section class="color-bg" id="contact">
+        <h2>Contact Us</h2>
+        <div class="content">
+        <form action="post" target="_blank">
+                <div class="form-row">
+                <label for="name">
+                Name<span aria-label="required">*</span>
+                </label>
+                <input type="text" name="name" id="name" maxlength="64" placeholder="Your name here" title="Fill in your first name" required>
+            </div>
+            <div class="form-row">
+                <label for="email">
+                Email<span aria-label="required">*</span>
+                </label>
+                <input type="email" name="email" placeholder="email@address.com" id="email" required>
+            </div>
+            <div class="form-row">
+                <label for="message">
+                Message<span aria-label="required">*</span>
+                </label>
+                <textarea name="message" id="message" cols="22" rows="10" maxlength="500" placeholder="Your message here"></textarea>
+            </div>
+            <div class="form-row">
+                <label style="height: 0"></label>
+                <button type="submit" class="button">Submit</button>
+            </div>
+        </form>
+        <div id="store-details">
+            <div id="contact-details">
+                <h3>Address</h3>
+                <address>
+                    <p>Shop 36, level 1,<br>The Myer Centre,<br>Queen Street Mall <br>Brisbane 4000</p> 
+                    <p>Ph: <a href="tel:+61732567101">07 3256 7101</a></p>
+                </address>
+            </div>
+            <div id="hours">
+                <h3>Opening hours</h3>
+                <p>Mon - Thu: 9am - 5:30pm<br>Fri: 9am - 9pm<br>Sat: 9am - 5pm<br>Sun: 10am - 5pm</p>
+            </div>         
+        </div>
+    </div>
+    </section>
+    
+
+
+    <footer>
+        <p>ABC Optical acknowledge the Turrbal people as the traditional custodians of the land on which we operate and pay our respects to elders past and present. We understand sovereignty was never ceded. </p>
+        <p>&#169; ABC Optical 2023</p>
+        <p>Website by <a href="">Uptown IT</a></p>
+    </footer>
+    <a href="#" id="back-to-top"><i class="fa-solid fa-chevron-up" title="back to top"></i></a>
+    
+    
+</body>
+</html>
