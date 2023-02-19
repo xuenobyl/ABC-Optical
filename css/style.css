@@ -219,7 +219,7 @@ p+.button{
     margin-top: 1rem;
 }
 #services {
-    background-image: url("/images/girl.jpg");
+    background-image: url("../images/girl.jpg");
     background-position: left;
     color: white;
 }
@@ -372,7 +372,7 @@ footer p {
 }
 @media (min-width: 770px) {
     header {
-        background-image: url("/images/mum-daughter.jpg");
+        background-image: url("../images/mum-daughter.jpg");
         background-position: 30% 50%;
         color: unset;
         text-align: left;
