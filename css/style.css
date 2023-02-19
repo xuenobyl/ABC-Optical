@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -15,24 +14,21 @@ body {
     --blue: #274C77;
     --blue2: #6096BA;
     --blue3: #A3CEF1;
-    width: 100vw;
     max-width: 1000px;
     margin: 0 auto;
     color: var(--blue);
 }
 h2 {
+    display: flex;
     margin-bottom: 1rem;
     font: 900 2rem/1.15 "Nunito Sans";
-    font-family: inherit;
 }
 h3 {
+    margin-bottom: 0.3rem;
     font: 700 1.3rem/1.3 "Nunito Sans";
-    font-family: inherit;
 }
 h4 {
-    padding-bottom: 0.2rem;
     font: 700 0.7rem/1.3 "Nunito Sans";
-    font-family: inherit;
     text-transform: uppercase;
 }
 p {
@@ -43,14 +39,19 @@ a {
     color: inherit;
     text-decoration: none;
 }
-p a, figcaption a {
+p a,
+figcaption a {
     text-decoration: underline;
+}
+#menu a {
+    display: block;
+    font: 700 1rem/2 "Nunito Sans";
+    color: black;
 }
 .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
     width: 100%;
     height: 2.5rem;
     box-sizing: border-box;
@@ -60,6 +61,20 @@ p a, figcaption a {
     color: white;
     background-color: var(--blue);
 }
+@media (hover: hover) {
+    #menu a:hover, p a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: var(--blue);
+    }
+    .button:hover, #back-to-top:hover{
+        cursor: pointer;
+        background-color: var(--blue2);
+    }
+}
+#menu a:active {
+    color: var(--blue2);
+}
 .button:active, #back-to-top:active {
     background-color: var(--blue3);
 }
@@ -67,11 +82,9 @@ p a, figcaption a {
     background-color: var(--white);
 }
 .photo-bg {
-    background-image: linear-gradient(to right, var(--blue), var(--blue)), url(../images/girl.jpg);
-    background-position: center;
+    background-color: var(--blue);
     background-size: cover;
     background-blend-mode: screen;
-    color: white;
 }
 nav {
     position: sticky;
@@ -80,18 +93,19 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: var(--white);
-    color: black;
     box-shadow: 0 5px 5px -5px var(--gray);
+    padding: 0 1.5rem;
 }
 #topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 88px;
+    color: black;
 }
 #logo {
     display: block;
-    width: min(100px, 50vw);
+    width: 4rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
@@ -107,63 +121,47 @@ nav {
     flex-direction: column;
     align-items: center;
 }
-
-#menu a {
-    display: block;
-    padding: 0;
-    font: 700 1rem/2 "Nunito Sans";
-    color: black;
-    background-color: var(--white);
-}
-
-#menu a:active {
-    background-color: var(--blue3);
-    color: var(--blue);
-}
-h4, #topbar {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    /* text-align: center; */
-}
 header {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    height: 170px;
-    /* border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    box-shadow: 0px 0px 15px 0px rgb(186, 190, 197); */
+    padding: 1.5rem;
+    color: var(--white);
+    text-align: center;
 }
 section {
     min-height: calc(100vh - 87px);
     padding: 2rem 1.5rem 3rem 1.5rem;
-    /* margin-bottom: 30px;
-    margin-top: 30px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 15px 0px rgb(186, 190, 197); */
     scroll-margin-top: 87px;
 }
 .content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 2rem;
 }
-#kid {
+#about figure {
+    margin-bottom: 2rem;
     width: min(150px, 60vw);
     align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#kid img {
+#about figure img {
     width: 100%;
 }
-#kid figcaption {
+#about figcaption {
     font-size: 0.45rem;
     color:#9f5fac;
 }
+article {
+    display: flex;
+    flex-direction: column;
+}
 p+.button{
-    margin-top: 2rem;
+    margin-top: 1rem;
+}
+#services {
+    background-image: url("/images/girl.jpg");
+    background-position: left;
+    color: white;
 }
 #services-grid {
     margin-bottom: 2.3rem;
@@ -175,21 +173,19 @@ p+.button{
 #services-grid > li {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     padding: 40px 15%;
-    height: min-content;
-    /* aspect-ratio: 3 / 1; */
     background-color: var(--white);
     border-radius: 10px;
     border-style: none;
     box-shadow: 0px 0px 15px 0px rgb(108, 115, 128);
 }
 #services-grid i {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 #services-grid h3 {
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 #services-grid ul {
     align-self: flex-start;
@@ -211,14 +207,13 @@ label {
     width: min(150px, 80vw);
     height: 1.35rem;
 }
-input {
+input, textarea {
     appearance: none;
-    height: 1.4rem;
-    border: 1px solid black;
+    border: 1px solid var(--blue);
     padding: 5px;
 }
-textarea {
-    padding: 5px;
+input {
+    height: 1.4rem;
 }
 #store-details {
     display: flex;
@@ -226,12 +221,10 @@ textarea {
     gap: 1rem;
 }
 footer {
-    margin: 0.5rem;
+    padding: 0.5rem;
 }
 footer p {
-    padding-bottom: 0.1rem;
     font: 400 0.7rem/1.4 "Nunito Sans";
-    font-family: inherit;
     text-align: center;
 }
 #back-to-top {
@@ -247,21 +240,7 @@ footer p {
     background-color: var(--blue);
     color: white;
 }
-@media (hover: hover) {
-    #menu a:hover, p a:hover {
-        color: var(--blue2);
-        text-decoration: underline;
-        cursor: pointer;
-    }
-    .button:hover, #back-to-top:hover{
-        background-color: var(--blue2);
-        cursor: pointer;
-    }
-}
 @media (min-width: 530px) {
-    .color-bg {
-        background-color: var(--white);
-    }
     nav {
         display: flex;
         flex-direction: row;
@@ -273,35 +252,27 @@ footer p {
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        padding-right: 1rem;
-    }
-    #menu a {
-        background-color: unset;
-    }
-    
-    #menu a:active {
-        color: var(--blue3);
     }
     #burger {
         display: none;
     }
-    /* #services {
-        flex-direction: column;
-    } */
-    /* #services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    #store-details {
+        flex-direction: row;
+        gap: 1rem;
     }
-    #services-grid > li {
-        aspect-ratio: 1 / 1;
-    } */
 }
-
 @media (min-width: 770px) {
+    header {
+        background-image: url("/images/mum-daughter.jpg");
+        background-position: 30% 50%;
+        color: unset;
+        text-align: left;
+    }
     .content {
         flex-direction: row;
         gap: 3rem;
     }
-    #kid {
+    #about figure {
         align-self: flex-start;
         order: 2;
         min-width: 250px;
@@ -319,12 +290,6 @@ footer p {
         width: 100%;
     }
     #store-details {
-        flex-direction: row;
-        justify-content: space-between;
-        flex: 1;
-    }
-    #store-details {
         flex-direction: column;
-        justify-content: flex-start;
     }
 }
